@@ -11,7 +11,6 @@ volumes:
   redis_data:
 
 services:
-  # Приложение (3 реплики)
   web:
     build:
       context: .
@@ -61,7 +60,6 @@ services:
       - "traefik.http.services.web-service.loadbalancer.healthcheck.path=/health"
       - "traefik.http.services.web-service.loadbalancer.healthcheck.interval=10s"
 
-  # Canary version (10% трафика)
   web-canary:
     build:
       context: .
@@ -95,7 +93,6 @@ services:
       - "traefik.http.services.web-canary-service.loadbalancer.healthcheck.path=/health"
       - "traefik.http.services.web-canary-service.loadbalancer.healthcheck.interval=10s"
 
-  # Traefik Load Balancer
   traefik:
     image: traefik:v2.10
     command:
@@ -113,7 +110,6 @@ services:
     networks:
       - monitoring
 
-  # Redis
   redis:
     image: redis:7.2-alpine
     volumes:
