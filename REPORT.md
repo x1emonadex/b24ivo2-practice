@@ -2,7 +2,7 @@
 
 - **ФИО**: Макаров Дмитрий Евгениевич
 - **Группа**: Б-24 ИВО-2
-- **Репозиторий**: https://github.com/x1emonadex/devops-practice-3
+- **Репозиторий**: https://github.com/x1emonadex/b24ivo2-practice/tree/devops-practice-v3
 
 ---
 
