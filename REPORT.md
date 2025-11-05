@@ -37,9 +37,9 @@
   - Метрики приложения через prom-client — http-запросы, ошибки, latency  
 
 - **Основные метрики:**  
-  1. `http_request_duration_ms` — показывает распределение времени ответа, отслеживает p95/p99 и выявляет узкие места  
-  2. `container_memory_usage_bytes` — контроль использования памяти контейнерами, предотвращение OOM kills  
-  3. `redis_connected_clients` — показывает нагрузку на Redis и выявляет утечки соединений  
+  1) `http_request_duration_ms` — показывает распределение времени ответа, отслеживает p95/p99 и выявляет узкие места  
+  2) `container_memory_usage_bytes` — контроль использования памяти контейнерами, предотвращение OOM kills  
+  3) `redis_connected_clients` — показывает нагрузку на Redis и выявляет утечки соединений  
 - **Скриншот дашборда:**
 
 ![Grafana Dashboard](screenshots/02_grafana_dashboard.jpeg)
@@ -131,9 +131,9 @@ traefik.http.services.weighted.weighted.services[1].weight=10
   
 ### Итоговые метрики
 - **Выводы и план улучшений:**  
-  1. Внедрить Redis кеширование для снижения p95 < 100 ms  
-  2. Оптимизировать пул соединений Redis (maxClients=50, min=10)  
-  3. Горизонтальное масштабирование: увеличить количество реплик до 5 с автоскейлингом
+  1) Внедрить Redis кеширование для снижения p95 < 100 ms  
+  2) Оптимизировать пул соединений Redis (maxClients=50, min=10)  
+  3) Горизонтальное масштабирование: увеличить количество реплик до 5 с автоскейлингом
      
 ---
 
@@ -152,3 +152,4 @@ traefik.http.services.weighted.weighted.services[1].weight=10
 - Настройка и управление observability stack
 - Настройка load balancing и blue-green deployments
 - Проведение тестирования производительности и управление SLO
+  
