@@ -37,9 +37,9 @@
   - Метрики приложения через prom-client — http-запросы, ошибки, latency  
 
 - **Основные метрики:**  
-  1) `http_request_duration_ms` — показывает распределение времени ответа, отслеживает p95/p99 и выявляет узкие места  
-  2) `container_memory_usage_bytes` — контроль использования памяти контейнерами, предотвращение OOM kills  
-  3) `redis_connected_clients` — показывает нагрузку на Redis и выявляет утечки соединений  
+  1 `http_request_duration_ms` — показывает распределение времени ответа, отслеживает p95/p99 и выявляет узкие места  
+  2 `container_memory_usage_bytes` — контроль использования памяти контейнерами, предотвращение OOM kills  
+  3 `redis_connected_clients` — показывает нагрузку на Redis и выявляет утечки соединений  
 - **Скриншот дашборда:**
 
 ![Grafana Dashboard](screenshots/02_grafana_dashboard.jpeg)
