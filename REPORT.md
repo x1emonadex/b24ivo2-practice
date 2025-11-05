@@ -123,17 +123,13 @@ traefik.http.services.weighted.weighted.services[1].weight=10
 - **k6 профиль нагрузки:**
 ![K6](screenshots/05_k6_results.png)
 
-- **k6 профиль нагрузки:**  
-  - Ramp-up: 30s до 20 VUs, 1m до 50 VUs  
-  - Steady: 2m на 100 VUs  
-  - Ramp-down: 1m до 0 VUs  
-
 - **Итоговые метрики:**  
   - p95 latency: 185 ms (OK)  
   - p99 latency: 245 ms (Info)  
   - Error rate: 0.05% (OK)  
-  - RPS: 95 req/s (Info) ### Итоговые метрики
-
+  - RPS: 95 req/s (Info)
+  
+### Итоговые метрики
 - **Выводы и план улучшений:**  
   1. Внедрить Redis кеширование для снижения p95 < 100 ms  
   2. Оптимизировать пул соединений Redis (maxClients=50, min=10)  
