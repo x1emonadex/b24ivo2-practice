@@ -1,0 +1,14 @@
+{
+  "name": "devops-practice-app",
+  "version": "1.0.0",
+  "description": "DevOps Practice Application with Metrics",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "prom-client": "^15.1.3",
+    "redis": "^4.7.1"
+  }
+}
